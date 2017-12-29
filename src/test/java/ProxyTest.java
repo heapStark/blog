@@ -1,7 +1,11 @@
 import heapStark.blogCode.proxy.cglib.CglibProxy;
+import heapStark.blogCode.proxy.interfaces.SayHello;
 import heapStark.blogCode.proxy.interfaces.impl.SayHelloImpl;
+import heapStark.blogCode.proxy.jdkProxy.JDKProxy;
 import net.sf.cglib.proxy.Enhancer;
 import org.junit.Test;
+
+import java.lang.reflect.Proxy;
 
 
 /**
@@ -17,6 +21,19 @@ public class ProxyTest {
         SayHelloImpl s = (SayHelloImpl) enhancer.create();
         s.say();
         String returnHello = s.returnHello();
-        assert (returnHello=="hello");
+        assert (returnHello == "hello");
+    }
+
+    @Test
+    public void jdkTest() {
+        SayHello sayHello = (SayHello) Proxy.newProxyInstance(
+                SayHello.class.getClassLoader(),
+                new Class[]{SayHello.class},
+                new JDKProxy());
+
+        sayHello.say();
+        String result = sayHello.returnHello();
+
+        assert (result == "hello");
     }
 }
