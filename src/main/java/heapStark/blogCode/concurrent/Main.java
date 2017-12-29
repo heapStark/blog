@@ -5,7 +5,6 @@ import heapStark.blogCode.concurrent.callable.Call;
 import heapStark.blogCode.concurrent.forkJoin.SumTask;
 import heapStark.blogCode.concurrent.threadLocal.SafeCounter;
 import heapStark.blogCode.utils.MultiThreadTestUtil;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.*;
@@ -155,23 +154,23 @@ public class Main {
         try {
 
             assert (singleFuture.get() == "hello");
-            assert ((Long)callFuture.get()<=20&&(Long)callFuture.get() >=9);
+            assert ((Long) callFuture.get() <= 20 && (Long) callFuture.get() >= 9);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Map<String,Long> map = new HashMap<>();
-        map.put("key",new Date().getTime());
+        Map<String, Long> map = new HashMap<>();
+        map.put("key", new Date().getTime());
         CountDownLatch countDownLatch = new CountDownLatch(5);
-        ScheduledFuture future = executorService.scheduleAtFixedRate(()->{
+        ScheduledFuture future = executorService.scheduleAtFixedRate(() -> {
             countDownLatch.countDown();
             System.out.println(new Date().getTime());
-            assert (new Date().getTime()-map.get("key")<=1020&&new Date().getTime()-map.get("key") >=1000);
-            map.put("key",new Date().getTime());
+            assert (new Date().getTime() - map.get("key") <= 1020 && new Date().getTime() - map.get("key") >= 1000);
+            map.put("key", new Date().getTime());
         }, 1000, 1000, TimeUnit.MILLISECONDS);
 
-        assert (future.isDone()==false);
+        assert (future.isDone() == false);
 
         try {
             countDownLatch.await();
