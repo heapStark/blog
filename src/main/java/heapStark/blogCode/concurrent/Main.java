@@ -11,6 +11,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
+ *blogcode
  * Created by wangzhilei3 on 2017/12/29.
  */
 public class Main {
@@ -98,8 +99,8 @@ public class Main {
     @Test
     public void callableTest() {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
-        assert (executorService.isShutdown() == false);
-        assert (executorService.isTerminated() == false);
+        assert (!executorService.isShutdown());
+        assert (!executorService.isTerminated());
         Future<List<String>> future = executorService.submit(new Call());
         try {
             assert (!future.isDone() );
@@ -113,7 +114,7 @@ public class Main {
         } catch (Exception e) {
             assert false;
         }
-        if (executorService.isShutdown() != false) throw new AssertionError();
+        if (executorService.isShutdown()) throw new AssertionError();
         assert (!executorService.isTerminated() );
 
     }
