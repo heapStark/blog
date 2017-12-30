@@ -71,7 +71,11 @@ public class Main {
             TimeUnit.SECONDS.sleep(5);
             assert (threadPoolExecutor.getActiveCount() == 0);
             assert (threadPoolExecutor.getTaskCount() == 3);
-
+            threadPoolExecutor.shutdown();
+            TimeUnit.SECONDS.sleep(1);
+            assert (threadPoolExecutor.isTerminated());
+            threadPoolExecutor.submit(runnable);
+            System.out.println(threadPoolExecutor.getActiveCount());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
