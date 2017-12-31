@@ -8,6 +8,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.WritableByteChannel;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * blogcode
@@ -65,11 +67,18 @@ public class Main {
     @Test
     public void bufferThreadUnsafeTest() {
         ByteBuffer buffer = ByteBuffer.allocate(1000);
+        CountDownLatch countDownLatch = new CountDownLatch(100);
         try {
             MultiThreadTestUtil.multiThreadRun(()->{
                 buffer.put("qwer".getBytes());
+                countDownLatch.countDown();
             },100);
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println(buffer.position());
