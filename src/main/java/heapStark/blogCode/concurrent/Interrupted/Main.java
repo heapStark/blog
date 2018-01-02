@@ -14,7 +14,7 @@ public class Main {
     public void interruptedTest() {
 
         Runnable runnableError = () -> {
-        //不会退出
+            //不会退出
             while (!Thread.interrupted()) {
                 System.out.println(new Date());
                 try {
@@ -40,18 +40,31 @@ public class Main {
             }
             System.out.println("reachable");
         };
-        Thread thread = new Thread(runnable);
+        //非阻塞操作通过interrupt()中断线程执行
+        Runnable unblockingRunnable = () -> {
+
+            while (!Thread.interrupted()) {
+                System.out.println("interrupted:    "+Thread.interrupted());
+                System.out.println(new Date());
+            }
+            //reachable
+            System.out.println("interrupted: " + Thread.interrupted());
+            assert (!Thread.interrupted());
+
+        };
+        Thread thread = new Thread(unblockingRunnable);
+
 
         thread.start();
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         thread.interrupt();
         try {
-            thread.join();
-            Thread.sleep(5000);
+            //thread.join();
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
