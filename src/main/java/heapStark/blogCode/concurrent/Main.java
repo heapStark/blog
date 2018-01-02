@@ -89,11 +89,15 @@ public class Main {
         ForkJoinPool pool = new ForkJoinPool();
         SumTask sumTask = new SumTask(1, 10);
         Future<Integer> future = pool.submit(sumTask);
+        if (sumTask.isCompletedAbnormally()){
+            System.out.println();sumTask.getException();
+        }
         try {
             assert (future.get() == 55);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+
     }
 
     @Test
