@@ -46,6 +46,10 @@ public class SelectorTest {
         assert (selectionKeys.size()==1);
         assert (selectionKeys.iterator().next().isWritable());
         assert (!selectionKeys.iterator().next().isReadable());
+        selectionKeys.iterator().next().cancel();
+        selector.selectNow();//执行就绪检查过程，但不阻塞。如果当前没有通道就绪，它将立即返回0
+        selector.select(1000);//阻塞十秒
+        selector.select();//在没有通道就绪时将无限阻塞
 
 
 

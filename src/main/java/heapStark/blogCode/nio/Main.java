@@ -338,4 +338,27 @@ public class Main {
         assert (channel == null);
     }
 
+    /**
+     * 线程中断测试
+     */
+    @Test
+    public void channelInterruptTest() throws Exception {
+
+        final ServerSocketChannel channel = ServerSocketChannel.open();
+        channel.socket().bind(new InetSocketAddress(8080), 1024);
+        final Thread thread = Thread.currentThread();
+        new Thread(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(3);
+                thread.interrupt();
+                //channel.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        ).start();
+        channel.accept();
+
+    }
+
 }
