@@ -117,6 +117,19 @@ public class Main {
 
     @Test
     public void fileInputChannelTest() throws Exception {
+        RandomAccessFile file = new RandomAccessFile("E:\\JcloudMyProject\\blogcode\\src\\main\\java\\heapStark\\blogCode\\nio\\Main.java", "r");
+        FileChannel channel2 = file.getChannel();
+        assert (channel2==file.getChannel());
+        ByteBuffer fileBuffer = ByteBuffer.allocate(10);
+        ByteBuffer fileBuffer2 = ByteBuffer.allocate(10);
+        channel2.read(fileBuffer);
+        fileBuffer.flip();
+        channel2.read(fileBuffer2);
+        fileBuffer2.flip();
+        assert (!fileBuffer.equals(fileBuffer2));
+        file.close();
+        assert (!channel2.isOpen());
+
         FileInputStream fileInputStream = new FileInputStream("E:\\JcloudMyProject\\blogcode\\src\\main\\java\\heapStark\\blogCode\\nio\\Main.java");
         ByteBuffer buffer = ByteBuffer.allocate(100);
         int size = fileInputStream.getChannel().read(buffer);
