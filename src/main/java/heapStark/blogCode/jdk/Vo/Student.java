@@ -89,7 +89,7 @@ public class Student implements Cloneable {
         sb.append("name='").append(name).append('\'');
         sb.append(", age=").append(age);
         sb.append(", birthday=").append(birthday);
-        sb.append(", it=").append(id);
+        sb.append(", id=").append(id);
         sb.append(", score=").append(score);
         sb.append(", gender=").append(gender);
         sb.append('}');

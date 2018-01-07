@@ -27,6 +27,7 @@ public class SessionFactory {
     static SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(configuration);
 
     static public SqlSessionFactory getFactory (){
+
         return factory;
     }
 

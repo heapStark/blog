@@ -6,26 +6,70 @@
 <mapper namespace="heapStark.blogCode.jdbc.mybatis.mapper.StudentMapper">
 
     <resultMap id="StudentMapperResultMap" type="heapStark.blogCode.jdk.Vo.Student">
-        <result column="id" property="id" />
-        <result column="score" property="score" />
-        <result column="age" property="age" />
-        <result column="name" property="name" />
-        <result column="gender" property="gender" />
-        <result column="birthday" property="birthday" />
-
+        <result column="id" property="id"/>
+        <result column="score" property="score"/>
+        <result column="age" property="age"/>
+        <result column="name" property="name"/>
+        <result column="gender" property="gender"/>
+        <result column="birthday" property="birthday"/>
     </resultMap>
-
 
 
     <select id="select" resultMap="StudentMapperResultMap" parameterType="heapStark.blogCode.jdk.Vo.Student">
         SELECT * FROM student
-          WHERE
+        WHERE
         <if test="id != null and id != ''">
             id = #{id}
         </if>
         ORDER BY id
         limit 1
     </select>
+
+    <insert id="insert" parameterType="heapStark.blogCode.jdk.Vo.Student">
+        INSERT INTO student
+        (
+        id,
+        score,
+        name,
+        age,
+        birthday,
+        gender
+        )
+        VALUES
+        (
+        #{id},
+        #{score},
+        #{name},
+        #{age},
+        #{birthday},
+        #{gender}
+        )
+    </insert>
+
+    <insert id="insertList" parameterType="java.util.List">
+
+        INSERT INTO student
+        (
+        id,
+        score,
+        name,
+        age,
+        birthday,
+        gender
+        )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.id},
+            #{item.score},
+            #{item.name},
+            #{item.age},
+            #{item.birthday},
+            #{item.gender}
+            )
+        </foreach>
+
+    </insert>
 
 
 </mapper>
