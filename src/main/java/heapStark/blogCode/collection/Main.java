@@ -41,4 +41,10 @@ public class Main {
         assert (!linkedList.toArray().equals(objects1));
         Map map = new HashMap();
     }
+    @Test
+    public void arrays(){
+        int[] ints = new int[]{1,2,3,4};
+        Arrays.sort(ints);
+
+    }
 }
