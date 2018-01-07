@@ -13,7 +13,7 @@ import java.util.Date;
 public class Main {
     @Test
     public void cloneTest() throws Exception {
-        Student student = new Student("laowang", 18, new Date());
+        Student student = new Student("laowang", 18, new Date(),1,2,3);
         Student studentClone = (Student) student.clone();
         assert (student.getBirthday() != studentClone.getBirthday());//默认浅拷贝,修改实现为深拷贝
         assert (student != studentClone);

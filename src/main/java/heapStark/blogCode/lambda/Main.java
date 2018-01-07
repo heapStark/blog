@@ -63,9 +63,9 @@ public class Main {
         /**
          * 基本类型
          */
-        Student student = new Student("wang", 1, new Date());
-        Student student1 = new Student("wang", 2, new Date());
-        Student student2 = new Student("wang", 3, new Date());
+        Student student = new Student("wang", 1, new Date(),1,2,3);
+        Student student1 = new Student("wang", 2, new Date(),1,2,3);
+        Student student2 = new Student("wang", 3, new Date(),1,2,3);
         Stream<Student> streamStudent = Stream.of(student, student1, student2);
         IntSummaryStatistics statistics = streamStudent.mapToInt((a) -> a.getAge()).summaryStatistics();
         assert (statistics.getMax() == 3);

@@ -6,17 +6,34 @@ import java.util.Date;
  * blogcode
  * Created by wangzhilei3 on 2017/12/30.
  */
-public class Student implements Cloneable{
+public class Student implements Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException {
-        Student student =  (Student)super.clone();
+        Student student = (Student) super.clone();
         student.setBirthday((Date) student.birthday.clone());
         return student;
     }
 
-    private  String name;
+    private String name;
     private int age;
     private Date birthday;
+    private int id;
+    private int score;
+    private int gender;
+
+
+    public Student() {
+        this("wang", 0, new Date(), 110, 123, 1);
+    }
+
+    public Student(String name, int age, Date birthday, int id, int score, int gender) {
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday;
+        this.id = id;
+        this.score = score;
+        this.gender = gender;
+    }
 
     public String getName() {
         return name;
@@ -42,18 +59,40 @@ public class Student implements Cloneable{
         this.birthday = birthday;
     }
 
-    public Student(String name, int age, Date birthday) {
-        this.name = name;
-        this.age = age;
-        this.birthday = birthday;
+    public int getId() {
+        return id;
     }
 
-    public Student() {
-        this(null,0,new Date());
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        final StringBuffer sb = new StringBuffer("Student{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", birthday=").append(birthday);
+        sb.append(", it=").append(id);
+        sb.append(", score=").append(score);
+        sb.append(", gender=").append(gender);
+        sb.append('}');
+        return sb.toString();
     }
 }

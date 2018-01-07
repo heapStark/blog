@@ -27,6 +27,13 @@ public class databasePoolTest {
         //connection.commit();
     }
     @Test
+    public void DROPTableTest() throws Exception{
+        DruidPooledConnection connection = source.getConnection();
+        Statement statement = connection.createStatement();
+        String sql = "DROP table teacher";
+        statement.execute(sql);
+    }
+    @Test
     public void createTest() throws Exception{
         DruidPooledConnection connection = source.getConnection();
         Statement statement = connection.createStatement();
@@ -37,7 +44,7 @@ public class databasePoolTest {
                 "  `gender` int(11) DEFAULT NULL,\n" +
                 "  `score` int(11) DEFAULT NULL,\n" +
                 "  `age` int(11) DEFAULT NULL,\n" +
-                "  `birthday` date DEFAULT NULL,\n" +
+                "  `birthday` datetime DEFAULT NULL,\n" +
                 "  PRIMARY KEY (`id`,`name`),\n" +
                 "  KEY `mysqlId` (`mysqlId`)\n" +
                 ") ENGINE=InnoDB DEFAULT CHARSET=utf8\n";

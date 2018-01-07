@@ -18,6 +18,14 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <dependencies>
         <!--test-->
@@ -115,7 +123,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.6</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.2</version>
+        </dependency>
 
 
     </dependencies>
@@ -131,5 +143,16 @@
             </properties>
         </profile>
     </profiles>
+
+    <!--<build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>-->
 
 </project>
