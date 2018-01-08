@@ -215,53 +215,68 @@ public class JDBCTest {
 
     /**
      * 幻读测试，insert 之后两次查询结果不一致
-     *
+     * 改为串行执行实际存在数据
      * @throws Exception
      */
     @Test
     public void REPEATABLEReadTest() throws Exception {
         MultiThreadTestUtil.multiThreadRun(() -> {
             Connection connection = JdbcUtils.getConnection("transaction");
+            Connection connectiondel = JdbcUtils.getConnection("transaction");
+            //清理数据
+            try {
+                Statement statementdel = connectiondel.createStatement();
+                statementdel.execute("DELETE FROM student WHERE id = 125");
+                connectiondel.close();
+            } catch (SQLException e) {
+
+            }
             try {
                 connection.setAutoCommit(false);
+
                 Statement statement = connection.createStatement();
+                System.out.println("开始添加数据");
                 String sql = "INSERT INTO student (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
-                statement.execute(sql);
+                boolean b = statement.execute(sql);
+                System.out.println("执行结果：" + b);
                 statement.close();
                 TimeUnit.SECONDS.sleep(3);
                 connection.commit();
-                System.out.println("rollback");
+                System.out.println("commit");
                 connection.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }, 1);
-
         Connection conn = JdbcUtils.getConnection("transaction");
-        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);//不可读取新行
-        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);//可以读取新行
-        conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);//可以读取新行
+        conn.setAutoCommit(false);
+
+        /*conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);//可读取新行
+        conn.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);//可以读取新行
+        conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);//可以读取新行*/
+        conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);//无法读取新行
         System.out.println("成功连接到数据库！");
         try {
-            TimeUnit.SECONDS.sleep(2);
             //创建一个Statement对象
             Statement stmt = conn.createStatement(); //创建Statement对象
-            String sql = "SELECT COUNT(*) FROM student WHERE id = 125";
+            String sql = "SELECT COUNT(*) FROM student ";
             ResultSet result = stmt.executeQuery(sql);
             result.next();
-            assert (result.getString(1).equals("0"));
-            TimeUnit.SECONDS.sleep(2);
+            //assert (result.getString(1).equals("0"));
+            System.out.println("事务提交前执行结果：" + result.getString(1));
+            TimeUnit.SECONDS.sleep(8);
             //同一事务第二次操作
             result = stmt.executeQuery(sql);
             result.next();
-            assert (result.getString(1).equals("1"));
-            System.out.println("执行结果！" + result.getString(1));
+            //assert (result.getString(1).equals("1"));
+            System.out.println("事务提交后执行结果：" + result.getString(1));
             stmt.close();
             conn.close();
+            TimeUnit.SECONDS.sleep(4);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        TimeUnit.SECONDS.sleep(10);
     }
 
 }
