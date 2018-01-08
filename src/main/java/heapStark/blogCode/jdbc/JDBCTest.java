@@ -79,6 +79,7 @@ public class JDBCTest {
 
     /**
      * 脏读测试 不可重复读 Connection.TRANSACTION_READ_UNCOMMITTED
+     *
      * @throws Exception
      */
     @Test
@@ -116,7 +117,7 @@ public class JDBCTest {
             TimeUnit.SECONDS.sleep(2);
             //创建一个Statement对象
             Statement stmt = conn.createStatement(); //创建Statement对象
-            String sql ="SELECT * FROM student WHERE id = 221";
+            String sql = "SELECT * FROM student WHERE id = 221";
             ResultSet result = stmt.executeQuery(sql);
             result.next();
             assert (result.getString("id").equals("221"));
@@ -134,7 +135,7 @@ public class JDBCTest {
             TimeUnit.SECONDS.sleep(2);
             //创建一个Statement对象
             Statement stmt = conn2.createStatement(); //创建Statement对象
-            String sql ="SELECT * FROM student WHERE id = 220";
+            String sql = "SELECT * FROM student WHERE id = 220";
             ResultSet result = stmt.executeQuery(sql);
             result.next();
             assert (result.getString("id").equals("220"));
@@ -147,11 +148,120 @@ public class JDBCTest {
     }
 
     /**
-     * 幻读测试
+     * 幻读测试，insert
+     *
      * @throws Exception
      */
     @Test
     public void committedReadTest() throws Exception {
+        MultiThreadTestUtil.multiThreadRun(() -> {
+            Connection connection = JdbcUtils.getConnection("transaction");
+            try {
+                connection.setAutoCommit(false);
+                Statement statement = connection.createStatement();
+                String sql = "INSERT INTO student (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
+                statement.execute(sql);
+                statement.close();
+                TimeUnit.SECONDS.sleep(7);
+                System.out.println("rollback");
+                connection.rollback();
+                connection.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, 1);
+
+        TimeUnit.SECONDS.sleep(2);
+        //可重复读读到新行
+        Connection conn = JdbcUtils.getConnection("transaction");
+        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);//不可读取新行
+        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);//可以读取新行
+        conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);//可以读取新行
+        System.out.println("成功连接到数据库！");
+        try {
+            TimeUnit.SECONDS.sleep(2);
+            //创建一个Statement对象
+            Statement stmt = conn.createStatement(); //创建Statement对象
+            String sql = "SELECT COUNT(*) FROM student WHERE id = 125";
+            ResultSet result = stmt.executeQuery(sql);
+            result.next();
+            assert (result.getString(1).equals("1"));
+            System.out.println("执行结果！" + result.getString(1));
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //串行化不读取新行
+        Connection conn2 = JdbcUtils.getConnection("transaction");
+        conn2.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+        System.out.println("成功连接到数据库！");
+        try {
+            TimeUnit.SECONDS.sleep(2);
+            //创建一个Statement对象
+            Statement stmt = conn2.createStatement(); //创建Statement对象
+            String sql = "SELECT COUNT(*) FROM student";
+            ResultSet result = stmt.executeQuery(sql);
+            result.next();
+            assert (result.getString(1).equals("1"));
+            System.out.println("串行化执行执行结果！" + result.getString(1));
+            stmt.close();
+            conn.close();
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 幻读测试，insert 之后两次查询结果不一致
+     *
+     * @throws Exception
+     */
+    @Test
+    public void REPEATABLEReadTest() throws Exception {
+        MultiThreadTestUtil.multiThreadRun(() -> {
+            Connection connection = JdbcUtils.getConnection("transaction");
+            try {
+                connection.setAutoCommit(false);
+                Statement statement = connection.createStatement();
+                String sql = "INSERT INTO student (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
+                statement.execute(sql);
+                statement.close();
+                TimeUnit.SECONDS.sleep(3);
+                connection.commit();
+                System.out.println("rollback");
+                connection.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, 1);
+
+        Connection conn = JdbcUtils.getConnection("transaction");
+        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);//不可读取新行
+        //conn.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);//可以读取新行
+        conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);//可以读取新行
+        System.out.println("成功连接到数据库！");
+        try {
+            TimeUnit.SECONDS.sleep(2);
+            //创建一个Statement对象
+            Statement stmt = conn.createStatement(); //创建Statement对象
+            String sql = "SELECT COUNT(*) FROM student WHERE id = 125";
+            ResultSet result = stmt.executeQuery(sql);
+            result.next();
+            assert (result.getString(1).equals("0"));
+            TimeUnit.SECONDS.sleep(2);
+            //同一事务第二次操作
+            result = stmt.executeQuery(sql);
+            result.next();
+            assert (result.getString(1).equals("1"));
+            System.out.println("执行结果！" + result.getString(1));
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
+
 }
