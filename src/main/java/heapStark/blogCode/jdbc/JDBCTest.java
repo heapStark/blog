@@ -279,4 +279,30 @@ public class JDBCTest {
         TimeUnit.SECONDS.sleep(10);
     }
 
+    /**
+     * 不支持非事务
+     */
+    @Test
+    public void testTransactionIso(){
+        Connection connection = JdbcUtils.getConnection("myisam");
+        try {
+            connection.setTransactionIsolation(Connection.TRANSACTION_NONE);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 默认事务级别 Connection.TRANSACTION_REPEATABLE_READ
+     */
+    @Test
+    public void testDefaultTransactionIso(){
+        Connection connection = JdbcUtils.getConnection("test");
+        try {
+            assert (connection.getTransactionIsolation()==Connection.TRANSACTION_REPEATABLE_READ);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
