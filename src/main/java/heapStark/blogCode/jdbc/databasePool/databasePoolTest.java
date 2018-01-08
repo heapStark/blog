@@ -58,7 +58,7 @@ public class databasePoolTest {
     public void insertTest() throws Exception{
         DruidPooledConnection connection = source.getConnection();
         Statement statement = connection.createStatement();
-        String sql = "INSERT INTO teacher (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
+        String sql = "INSERT INTO student (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
         statement.execute(sql);
 
     }
