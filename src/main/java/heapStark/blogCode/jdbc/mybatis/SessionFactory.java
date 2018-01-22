@@ -1,7 +1,6 @@
 package heapStark.blogCode.jdbc.mybatis;
 
 import heapStark.blogCode.jdbc.databasePool.PoolUtils;
-import heapStark.blogCode.jdbc.mybatis.mapper.StudentMapper;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,13 +19,15 @@ public class SessionFactory {
     static TransactionFactory transactionFactory = new JdbcTransactionFactory();
     static Environment environment = new Environment("development", transactionFactory, dataSource);
     static Configuration configuration = new Configuration(environment);
+
     static {
         //configuration.addMapper(StudentMapper.class);
         configuration.addMappers("heapStark");
     }
+
     static SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(configuration);
 
-    static public SqlSessionFactory getFactory (){
+    static public SqlSessionFactory getFactory() {
 
         return factory;
     }

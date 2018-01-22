@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -301,6 +302,97 @@ public class JDBCTest {
         try {
             assert (connection.getTransactionIsolation()==Connection.TRANSACTION_REPEATABLE_READ);
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * innodb //innodb 优势并不明显
+     写 time used :31838
+     读 time used :32107
+     写 time used :30354
+     读 time used :31358
+     写 time used :29250
+     读 time used :29657
+     写 time used :29528
+     读 time used :30929
+     myism
+     写 time used :32846
+     读 time used :33079
+     写 time used :32921
+     读 time used :33224
+     写 time used :32019
+     读 time used :32601
+     写 time used :30296
+     读 time used :30550
+     * @throws Exception
+     */
+    @Test
+    public void testMyisam() throws Exception{
+        Connection conn = JdbcUtils.getConnection("myisam");
+        MultiThreadTestUtil.multiThreadRun(()->{
+            Connection connection = JdbcUtils.getConnection("myisam");
+            try {
+                connection.setAutoCommit(false);
+                TimeUnit.SECONDS.sleep(3);
+                System.out.println("开始读操作");
+                connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
+                Statement stmt = connection.createStatement(); //创建Statement对象
+                String sql = "SELECT * FROM student WHERE id = 124";
+                int a =0;
+                Date begain = new Date();
+                while (a<100000){
+                    stmt.execute("SELECT * FROM student WHERE id = 124");
+                    ResultSet result = stmt.executeQuery(sql);
+                    result.next();
+                    //System.out.println("执行结果！" + result.getString("birthday"));
+                    a++;
+                }
+                System.out.println("读 time used :"+(new Date().getTime()-begain.getTime()));
+                ResultSet result = stmt.executeQuery(sql);
+                result.next();
+                System.out.println("执行结果！" + result.getString("birthday"));
+                stmt.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        },1);
+
+
+        //开始写操作
+        try {
+            assert (conn.getTransactionIsolation()==Connection.TRANSACTION_REPEATABLE_READ);
+            conn.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
+            try {
+                assert (conn.getAutoCommit() == true);
+                conn.setAutoCommit(false);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            System.out.println("成功连接到数据库！");
+            try {
+                //创建一个Statement对象
+                TimeUnit.SECONDS.sleep(2);
+                System.out.println("开始写操作");
+                Statement stmt = conn.createStatement(); //创建Statement对象
+                String sql = "INSERT INTO student (id, NAME,gender,score,age,birthday)VALUES('125','liu','0','123','15',NOW())";
+                boolean result = stmt.execute(sql);
+                int a =0;
+                Date begain = new Date();
+                while (a<200000){
+                    stmt.execute("UPDATE student SET birthday =now() WHERE id = 125");
+                    a++;
+                }
+                System.out.println("写 time used :"+(new Date().getTime()-begain.getTime()));
+                System.out.println("执行结果！" + result);
+                stmt.close();
+                conn.commit();
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            TimeUnit.SECONDS.sleep(32);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
