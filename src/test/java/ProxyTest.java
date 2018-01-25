@@ -27,7 +27,7 @@ public class ProxyTest {
     @Test
     public void jdkTest() {
         SayHello sayHello = (SayHello) Proxy.newProxyInstance(
-                SayHello.class.getClassLoader(),
+                SayHelloImpl.class.getClassLoader(),
                 new Class[]{SayHello.class},
                 new JDKProxy());
 

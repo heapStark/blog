@@ -10,6 +10,8 @@ public class JDKProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        //method.invoke(proxy,args); proxy实际没用
+        //method.invoke(this, args);
         System.out.println("hello");
         return "hello";
     }

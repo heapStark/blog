@@ -13,7 +13,15 @@
         <result column="gender" property="gender"/>
         <result column="birthday" property="birthday"/>
     </resultMap>
-
+    <select id="selectById" resultMap="StudentMapperResultMap" parameterType="int">
+        SELECT * FROM student
+        WHERE
+        <if test="id != null and id != ''">
+            id = #{id}
+        </if>
+        ORDER BY id
+        limit 1
+    </select>
 
     <select id="select" resultMap="StudentMapperResultMap" parameterType="heapStark.blogCode.jdk.Vo.Student">
         SELECT * FROM student

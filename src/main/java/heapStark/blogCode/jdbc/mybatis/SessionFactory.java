@@ -3,6 +3,7 @@ package heapStark.blogCode.jdbc.mybatis;
 import heapStark.blogCode.jdbc.databasePool.PoolUtils;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
+import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.TransactionFactory;
@@ -19,6 +20,9 @@ public class SessionFactory {
     static TransactionFactory transactionFactory = new JdbcTransactionFactory();
     static Environment environment = new Environment("development", transactionFactory, dataSource);
     static Configuration configuration = new Configuration(environment);
+    static {
+        configuration.setDefaultExecutorType(ExecutorType.SIMPLE);
+    }
 
     static {
         //configuration.addMapper(StudentMapper.class);

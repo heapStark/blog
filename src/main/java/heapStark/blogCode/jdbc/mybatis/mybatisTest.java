@@ -18,6 +18,18 @@ public class mybatisTest {
     private SqlSessionFactory sessionFactory = SessionFactory.getFactory();
 
     @Test
+    public void selectByIdTest() throws Exception {
+        SqlSession session = sessionFactory.openSession(true);
+        try {
+            StudentMapper mapper = session.getMapper(StudentMapper.class);
+            Student selectedStudent = mapper.selectById(124);
+            System.out.println(selectedStudent);
+        } finally {
+            session.close();
+        }
+    }
+
+    @Test
     public void selectTest() throws Exception {
         SqlSession session = sessionFactory.openSession(true);
         try {

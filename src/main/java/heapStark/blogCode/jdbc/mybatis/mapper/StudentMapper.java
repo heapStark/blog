@@ -1,6 +1,7 @@
 package heapStark.blogCode.jdbc.mybatis.mapper;
 
 import heapStark.blogCode.jdk.Vo.Student;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public interface StudentMapper {
      * @return
      */
     Student select(Student student);
+    Student selectById( @Param("id") int id);
 
     /**
      *
