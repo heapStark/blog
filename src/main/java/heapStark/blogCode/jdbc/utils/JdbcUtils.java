@@ -20,7 +20,7 @@ public class JdbcUtils {
     }
 
     public static Connection getConnection(String databaseName){
-        String url = "jdbc:mysql://localhost:3306/"+databaseName+"?useUnicode=true&characterEncoding=utf8";    //JDBC的URL
+        String url = "jdbc:mysql://localhost:3306/"+databaseName+"?cachePrepStmts=false&useUnicode=true&characterEncoding=utf8&useServerPrepStmts=false&prepStmtCacheSize=10000&prepStmtCacheSqlLimit=20487&rewriteBatchedStatements=true";    //JDBC的URL
         //调用DriverManager对象的getConnection()方法，获得一个Connection对象
         Connection conn = null;
         try {
