@@ -200,11 +200,58 @@ public class Algorithm {
         return null;
     }
 
+    /**
+     * 合并有K个序数组
+     *
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists(ArrayList<ListNode> lists) {
+        if (null == lists || lists.size() <= 0)
+            return null;
+        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.size(), new Comp());
+        for (ListNode head : lists) {
+            if (null != head)
+                queue.offer(head);
+        }
+        ListNode dummy = new ListNode(0);
+        ListNode pnode = dummy;
+        while (!queue.isEmpty()) {
+            ListNode node = queue.poll();
+            pnode.next = node;
+            if (node.next != null)
+                queue.offer(node.next);
+            pnode = pnode.next;
 
+        }
+        return dummy.next;
 
-    
+    }
 
+    /**
+     * swapPairs pre, cur, temp 三组变量
+     * @param head
+     * @return
+     */
+    public static ListNode swapPairs(ListNode head) {
+        if(head == null || head.next == null) return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        for (ListNode pre = dummy, cur = head, temp; cur != null && cur.next != null; pre = cur, cur = cur.next) {
+            temp = cur.next;
+            cur.next = temp.next;
+            temp.next = pre.next;
+            pre.next = temp;
+        }
+        return dummy.next;
+    }
 
+    /**
+     * 链表求和
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
@@ -233,34 +280,6 @@ public class Algorithm {
         ListNode re = new ListNode((l1.val + l2.val + x) % 10);
         re.next = addTwoNumbers(l1.next, l2.next, (l1.val + l2.val + x) / 10);
         return re;
-    }
-
-    /**
-     * 合并有序数组
-     *
-     * @param lists
-     * @return
-     */
-    public ListNode mergeKLists(ArrayList<ListNode> lists) {
-        if (null == lists || lists.size() <= 0)
-            return null;
-        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.size(), new Comp());
-        for (ListNode head : lists) {
-            if (null != head)
-                queue.offer(head);
-        }
-        ListNode dummy = new ListNode(0);
-        ListNode pnode = dummy;
-        while (!queue.isEmpty()) {
-            ListNode node = queue.poll();
-            pnode.next = node;
-            if (node.next != null)
-                queue.offer(node.next);
-            pnode = pnode.next;
-
-        }
-        return dummy.next;
-
     }
 
 
