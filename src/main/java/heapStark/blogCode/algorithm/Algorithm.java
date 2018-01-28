@@ -1,11 +1,6 @@
 package heapStark.blogCode.algorithm;
 
-import com.sun.org.apache.regexp.internal.RE;
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * blogcode
@@ -71,7 +66,7 @@ public class Algorithm {
 
     }
 
-    @Test
+
     public void sortedListToBSTTest() {
         ListNode listNode = new ListNode(3);
         listNode.next = new ListNode(5);
@@ -104,7 +99,6 @@ public class Algorithm {
 
     /**
      * 快排
-     *
      * @param array
      * @param startIndex
      * @param endIndex
@@ -120,7 +114,6 @@ public class Algorithm {
     }
 
     /**
-     * 切分数组
      *
      * @param array
      * @param startIndex
@@ -148,6 +141,151 @@ public class Algorithm {
         return leftIndex;
     }
 
+    public int maxPathSum(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left == null && root.right == null) {
+            return root.val;
+        } else {
+            int k = Math.max(root.val + maxPathSum(root.left), root.val + maxPathSum(root.right));
+            k = Math.max(k, root.val);
+            if (k > 0) {
+                return k;
+            } else return 0;
+        }
+    }
+
+    public int longestValidParenthesesDP(String s) {
+        if (s.length() == 0 || s.equals("")) {
+            return 0;
+        }
+        char[] st = s.toCharArray();
+        int[] dp = new int[st.length];
+        int pre = 0;
+        int res = 0;
+        for (int i = 1; i < st.length; i++) {
+            if (st[i] == ')') {
+                pre = i - dp[i - 1] - 1;
+                if (pre >= 0 && st[pre] == '(') {
+                    dp[i] = dp[i - 1] + 2 + (pre > 0 ? dp[pre - 1] : 0);
+                }
+            }
+            res = Math.max(res, dp[i]);
+        }
+        return res;
+    }
+
+    public int longestValidParenthesesS(String s) {
+        if (s == null || s.length() < 1)
+            return 0;
+        Stack<Integer> stack = new Stack<Integer>();
+        int max = 0, left = -1;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(')
+                stack.push(i);
+            else {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                    if (!stack.isEmpty())
+                        max = Math.max(max, i - stack.peek());
+                    else
+                        max = Math.max(max, i - left);
+                } else
+                    left = i;
+            }
+        }
+        return max;
+    }
+
+    public boolean hasPathSum(TreeNode root, int target) {
+        if (root == null) return false;
+
+        if (root.val == target && root.left == null && root.right == null) return true;
+        return hasPathSum(root.left, target - root.val)
+                || hasPathSum(root.right, target - root.val);
+    }
+
+    ArrayList<ArrayList<Integer>> lists = new ArrayList<>();
+
+    public void hasPathSumHelp(TreeNode root, int target, ArrayList<Integer> list) {
+        if (root == null) return;
+        list.add(root.val);
+        if (root.val == target && root.left == null && root.right == null) {
+            lists.add(list);
+            return;
+        } else {
+            hasPathSumHelp(root.right, target - root.val, list);
+            hasPathSumHelp(root.left, target - root.val, new ArrayList<>(list));
+        }
+
+    }
+
+    public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+        hasPathSumHelp(root, sum, new ArrayList<>());
+        return lists;
+    }
+
+
+    ArrayList<ArrayList<Integer>> res = null;
+
+    public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
+        res = new ArrayList<ArrayList<Integer>>();
+        if (root == null)
+            return res;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+        levelOrderBottom(queue);
+        return res;
+    }
+
+    private void levelOrderBottom(Queue<TreeNode> queue) {
+        if (queue.isEmpty())
+            return;
+        int size = queue.size();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i = 0; i < size; i++) {
+            TreeNode node = queue.poll();
+            if (node.left != null)
+                queue.offer(node.left);
+            if (node.right != null)
+                queue.offer(node.right);
+            list.add(node.val);
+        }
+        // 理解堆栈的原理，先进行递归，再将list保存到res中
+        levelOrderBottom(queue);
+        res.add(list);
+    }
+
+
+    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if (root == null) return res;
+        inorder(root, res);
+        return res;
+    }
+
+    private static void inorder(TreeNode root, ArrayList<Integer> list) {
+        if (root != null) {
+            inorder(root.left, list);
+            list.add(root.val);
+            inorder(root.right, list);
+        }
+    }
+
+    public int maxProfit(int[] prices) {
+        int buy1 = Integer.MIN_VALUE, sell1 = 0, buy2 = Integer.MIN_VALUE, sell2 = 0;
+        for (int i = 0; i < prices.length; i++) {
+            buy1 = Math.max(buy1, -prices[i]);   //记录之前所有天最便宜的股价
+            sell1 = Math.max(sell1, buy1 + prices[i]);  //记录之前所有天只进行1次买卖的最大利益
+            buy2 = Math.max(buy2, sell1 - prices[i]);   //记录之前天先进行1次交易获得最大利益后，
+            //再买到那次交易后最便宜股价时剩余的净利润
+            sell2 = Math.max(sell2, buy2 + prices[i]); //记录之前天进行2次完整交易的最大利润
+        }
+        return sell2;
+
+    }
+
     public ArrayList<TreeNode> generateTrees(int n) {
 
         return generateTrees(1, n);
@@ -168,6 +306,10 @@ public class Algorithm {
         return arrayList;
     }
 }
+
+
+
+
 
 class Comp implements Comparator<ListNode> {
     public int compare(ListNode o1, ListNode o2) {
