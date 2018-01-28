@@ -3,10 +3,207 @@ package heapStark.blogCode.algorithm;
 import java.util.*;
 
 /**
- * blogcode
+ * blogcode leetCode
  * Created by wangzhilei3 on 2018/1/25.
  */
 public class Algorithm {
+    /**
+     * 链表排序
+     *
+     * @param head
+     * @return
+     */
+    public ListNode sortList(ListNode head) {
+
+        if (head == null || head.next == null)
+            return head;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode right = sortList(slow.next);
+        slow.next = null;
+        ListNode left = sortList(head);
+        return mergeSorted(left, right);
+
+    }
+
+    /**
+     * mergeSorted
+     *
+     * @param left
+     * @param right
+     * @return
+     */
+    public ListNode mergeSorted(ListNode left, ListNode right) {
+
+        ListNode temp_head = new ListNode(0);
+        ListNode temp_node = temp_head;
+        while (left != null && right != null) {
+            if (left.val < right.val) {
+                temp_node.next = left;
+                left = left.next;
+            } else {
+                temp_node.next = right;
+                right = right.next;
+            }
+            temp_node = temp_node.next;
+        }
+        if (left != null)
+            temp_node.next = left;
+        if (right != null)
+            temp_node.next = right;
+        return temp_head.next;
+    }
+
+    /**
+     * 递归解法效率很差
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reorderListHelper(ListNode head) {
+
+        return head;
+    }
+
+    /**
+     * 快慢指针拆分
+     *
+     * @param head
+     */
+    public void reorderList(ListNode head) {
+        if (head == null || head.next == null)
+            return;
+        ListNode after = reverseList(twoList(head));
+
+        // 合并两个链表
+        ListNode first = head;
+        while (first != null && after != null) {
+            ListNode ftemp = first.next;
+            ListNode aftemp = after.next;
+            first.next = after;
+            first = ftemp;
+            after.next = first;
+            after = aftemp;
+        }
+    }
+
+    /**
+     * 链表拆分
+     *
+     * @param head
+     * @return
+     */
+    public ListNode twoList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        // 快满指针找到中间节点
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        // 拆分链表
+        ListNode temp = slow.next;
+        slow.next = null;
+        return temp;
+    }
+
+    /**
+     * 链表逆序
+     *
+     * @param head
+     */
+    public ListNode reverseList(ListNode head) {
+        ListNode tail = head;
+        head = null;
+        while (tail != null) {
+            ListNode temp = tail.next;
+            tail.next = head;
+            head = tail;
+            tail = temp;
+        }
+        return head;
+    }
+
+    /**
+     * 合并链表
+     *
+     * @param listNode1
+     * @param listNode2
+     * @return
+     */
+    public ListNode merge(ListNode listNode1, ListNode listNode2) {
+        ListNode tail = new ListNode(1);
+        ListNode listNode = tail;
+        while (listNode1 != null && listNode2 != null) {
+            tail.next = listNode1;
+            tail.next.next = listNode2;
+            tail = listNode2;
+            listNode2.next = listNode1.next;
+            listNode1 = listNode1.next;
+            listNode2 = listNode2.next;
+        }
+        return listNode.next;
+    }
+
+    /**
+     * 有环快慢指针碰撞
+     *
+     * @param head
+     * @return
+     */
+    public boolean hasCycle(ListNode head) {
+        if (head == null) {
+            return false;
+        }
+        ListNode fast = head;
+        ListNode low = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            low = low.next;
+            if (fast == low) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    /**
+     * 环的位置
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if (fast == slow) {
+                ListNode slow2 = head;
+                while (slow2 != slow) {
+                    slow = slow.next;
+                    slow2 = slow2.next;
+                }
+                return slow;
+            }
+        }
+        return null;
+    }
+
+
+
+    
+
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
