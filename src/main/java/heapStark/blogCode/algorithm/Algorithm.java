@@ -99,6 +99,7 @@ public class Algorithm {
 
     /**
      * 快排
+     *
      * @param array
      * @param startIndex
      * @param endIndex
@@ -114,7 +115,6 @@ public class Algorithm {
     }
 
     /**
-     *
      * @param array
      * @param startIndex
      * @param endIndex
@@ -305,14 +305,42 @@ public class Algorithm {
 
         return arrayList;
     }
+
+    public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
+        if (intervals == null || intervals.size() == 0) {
+            return new ArrayList<>(Arrays.asList(newInterval));
+        }
+        for (Interval interval : intervals) {
+            if (interval.end < newInterval.start) {
+
+            } else if (interval.end >= newInterval.start) {
+                interval.end = Math.max(interval.end, newInterval.start);
+            }
+        }
+
+
+        return null;
+    }
 }
-
-
-
 
 
 class Comp implements Comparator<ListNode> {
     public int compare(ListNode o1, ListNode o2) {
         return o1.val - o2.val;
+    }
+}
+
+class Interval {
+    int start;
+    int end;
+
+    Interval() {
+        start = 0;
+        end = 0;
+    }
+
+    Interval(int s, int e) {
+        start = s;
+        end = e;
     }
 }
