@@ -19,7 +19,7 @@ public class RedissonTest {
         Config config = new Config();
         config.useSingleServer().setAddress("192.168.107.53:6379").setPassword("workorder");
         RedissonClient redissonClient = redisUtils.getRedisson(config);
-        //创建可充入锁
+        //创建可重入锁
         RLock rLock = redissonClient.getLock("hello");
         //获取锁
         rLock.tryLock(100,100, TimeUnit.SECONDS);
