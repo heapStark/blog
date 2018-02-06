@@ -44,8 +44,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 	    String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new java.util.Date(
 		    System.currentTimeMillis()).toString() : "BAD ORDER";
 	    ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
-	    ctx.write(resp);
-	    ctx.flush();
+	    ctx.writeAndFlush(resp);
     }
 
 
