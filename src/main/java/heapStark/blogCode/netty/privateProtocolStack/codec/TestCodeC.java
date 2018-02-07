@@ -15,8 +15,9 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.codec;
 
-import com.phei.netty.protocol.netty.struct.Header;
-import com.phei.netty.protocol.netty.struct.NettyMessage;
+
+import heapStark.blogCode.netty.privateProtocolStack.struct.Header;
+import heapStark.blogCode.netty.privateProtocolStack.struct.NettyMessage;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 

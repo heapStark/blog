@@ -15,7 +15,7 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.codec;
 
-import com.phei.netty.protocol.netty.struct.NettyMessage;
+import heapStark.blogCode.netty.privateProtocolStack.struct.NettyMessage;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
@@ -29,7 +29,7 @@ import java.util.Map;
  * @version 1.0
  */
 public final class NettyMessageEncoder extends
-	MessageToByteEncoder<NettyMessage> {
+		MessageToByteEncoder<NettyMessage> {
 
     MarshallingEncoder marshallingEncoder;
 

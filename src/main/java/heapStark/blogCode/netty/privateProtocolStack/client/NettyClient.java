@@ -15,9 +15,10 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.client;
 
-import com.phei.netty.protocol.netty.NettyConstant;
-import com.phei.netty.protocol.netty.codec.NettyMessageDecoder;
-import com.phei.netty.protocol.netty.codec.NettyMessageEncoder;
+
+import heapStark.blogCode.netty.privateProtocolStack.NettyConstant;
+import heapStark.blogCode.netty.privateProtocolStack.codec.NettyMessageDecoder;
+import heapStark.blogCode.netty.privateProtocolStack.codec.NettyMessageEncoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -27,8 +28,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.ReadTimeoutHandler;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
@@ -42,7 +44,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class NettyClient {
 
-    private static final Log LOG = LogFactory.getLog(NettyClient.class);
+    private static final Logger LOG = LoggerFactory.getLogger(NettyClient.class);
 
     private ScheduledExecutorService executor = Executors
             .newScheduledThreadPool(1);

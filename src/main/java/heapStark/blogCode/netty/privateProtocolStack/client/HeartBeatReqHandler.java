@@ -15,13 +15,15 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.client;
 
-import com.phei.netty.protocol.netty.MessageType;
-import com.phei.netty.protocol.netty.struct.Header;
-import com.phei.netty.protocol.netty.struct.NettyMessage;
+
+import heapStark.blogCode.netty.privateProtocolStack.MessageType;
+import heapStark.blogCode.netty.privateProtocolStack.struct.Header;
+import heapStark.blogCode.netty.privateProtocolStack.struct.NettyMessage;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -33,7 +35,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class HeartBeatReqHandler extends ChannelHandlerAdapter {
 
-    private static final Log LOG = LogFactory.getLog(HeartBeatReqHandler.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HeartBeatReqHandler.class);
 
     private volatile ScheduledFuture<?> heartBeat;
 

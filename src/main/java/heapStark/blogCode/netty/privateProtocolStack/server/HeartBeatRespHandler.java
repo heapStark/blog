@@ -15,13 +15,15 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.server;
 
-import com.phei.netty.protocol.netty.MessageType;
-import com.phei.netty.protocol.netty.struct.Header;
-import com.phei.netty.protocol.netty.struct.NettyMessage;
+
+import heapStark.blogCode.netty.privateProtocolStack.MessageType;
+import heapStark.blogCode.netty.privateProtocolStack.struct.Header;
+import heapStark.blogCode.netty.privateProtocolStack.struct.NettyMessage;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * @author Lilinfeng
@@ -30,7 +32,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class HeartBeatRespHandler extends ChannelHandlerAdapter {
 
-	private static final Log LOG = LogFactory.getLog(HeartBeatRespHandler.class);
+	private static final Logger LOG = LoggerFactory.getLogger(HeartBeatRespHandler.class);
 
 
     @Override

@@ -15,9 +15,10 @@
  */
 package heapStark.blogCode.netty.privateProtocolStack.server;
 
-import com.phei.netty.protocol.netty.NettyConstant;
-import com.phei.netty.protocol.netty.codec.NettyMessageDecoder;
-import com.phei.netty.protocol.netty.codec.NettyMessageEncoder;
+
+import heapStark.blogCode.netty.privateProtocolStack.NettyConstant;
+import heapStark.blogCode.netty.privateProtocolStack.codec.NettyMessageDecoder;
+import heapStark.blogCode.netty.privateProtocolStack.codec.NettyMessageEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -28,8 +29,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.ReadTimeoutHandler;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -40,7 +42,7 @@ import java.io.IOException;
  */
 public class NettyServer {
 
-	private static final Log LOG = LogFactory.getLog(NettyServer.class);
+	private static final Logger LOG = LoggerFactory.getLogger(NettyServer.class);
 
     public void bind() throws Exception {
 	// 配置服务端的NIO线程组
