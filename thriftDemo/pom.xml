@@ -14,7 +14,7 @@
         <dependency>
             <groupId>org.apache.thrift</groupId>
             <artifactId>libthrift</artifactId>
-            <version>0.10.0</version>
+            <version>0.5.0</version>
         </dependency>
         <dependency>
             <groupId>backtype</groupId>
@@ -23,6 +23,17 @@
         </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,6 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
