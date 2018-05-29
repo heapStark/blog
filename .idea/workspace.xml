@@ -2,147 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e403830-4f12-4fb7-84b6-72219b4f13b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_10_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_el_commons_el_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_api_1_0_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_1_4_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__oro_oro_2_0_8.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/Http/Http.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/JSQLParser/CCJSqlParserManagerTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/algorithm/Algorithm.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/algorithm/Comp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/algorithm/Interval.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/algorithm/ListNode.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/algorithm/TreeNode.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/collection/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/collection/MapTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/collection/SetTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/Interrupted/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/callable/Call.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/executerService/Main$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/executerService/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/forkJoin/SumTask.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/concurrent/threadLocal/SafeCounter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/designPattern/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/designPattern/singleton/EnumSingleton.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/designPattern/singleton/Singleton$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/designPattern/singleton/Singleton$SingletonHolder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/designPattern/singleton/Singleton.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/enums/Gender.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/JDBCTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/databasePool/PoolUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/databasePool/databasePoolTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/mybatis/SessionFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/mybatis/mapper/StudentMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/mybatis/mapper/StudentMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/mybatis/mybatisTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdbc/utils/JdbcUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdk/Vo/Student.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/jdk/clone/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/lambda/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/lambda/fuctionalnterface/Predicate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeClient$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeClientHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeServer$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeServer$ChildChannelHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/TCPadhesive/TimeServerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeClient$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeClientHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeServer$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeServer$ChildChannelHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/decode/TimeServerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/MessageType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/NettyConstant.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/HeartBeatReqHandler$HeartBeatTask.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/HeartBeatReqHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/LoginAuthReqHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/NettyClient$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/NettyClient$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/client/NettyClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/ChannelBufferByteInput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/ChannelBufferByteOutput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/MarshallingCodecFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/MarshallingDecoder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/MarshallingEncoder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/NettyMessageDecoder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/NettyMessageEncoder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/codec/TestCodeC.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/server/HeartBeatRespHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/server/LoginAuthRespHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/server/NettyServer$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/server/NettyServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/struct/Header.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/privateProtocolStack/struct/NettyMessage.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeClient$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeClient$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeClientHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeServer$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeServer$ChildChannelHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/netty/timeServer/TimeServerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/SelectorTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/timeServer/MultiplexerTimeServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/timeServer/TimeClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/timeServer/TimeClientHandle.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/timeServer/TimeServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/nio/utils/NIOUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/proxy/cglib/CglibProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/proxy/interfaces/SayHello.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/proxy/interfaces/impl/SayHelloImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/proxy/jdkProxy/JDKProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/jedis/JedisClientPool$SingletonHolder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/jedis/JedisClientPool.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/jedis/JedisTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/jedis/RedisCache.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/jedis/RedisFunc.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/redisson/RedisUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/redis/redisson/RedissonTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/utils/MultiThreadTestUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/zookeeper/ZkTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/heapStark/blogCode/zookeeper/zkUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ProxyTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/gen-java/heapStark/blogCode/thrift/service/NameService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/blogcode.iml" afterPath="$PROJECT_DIR$/blogcode.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/thriftDemo/pom.xml" afterPath="$PROJECT_DIR$/thriftDemo/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/src/main/NameService.thrift" afterPath="$PROJECT_DIR$/thriftDemo/src/main/thrift/NameService.thrift" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/src/main/java/thrift/Client.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/src/main/java/thrift/NameService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/src/main/java/thrift/NameServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/src/main/java/thrift/Server.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/Client.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncClient$Factory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncClient$echoName_call.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncIface.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncProcessor$echoName$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncProcessor$echoName.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$AsyncProcessor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$Client$Factory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$Client.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$Iface.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$Processor$echoName.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$Processor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args$_Fields.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args$echoName_argsStandardScheme.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args$echoName_argsStandardSchemeFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args$echoName_argsTupleScheme.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args$echoName_argsTupleSchemeFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_args.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result$_Fields.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result$echoName_resultStandardScheme.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result$echoName_resultStandardSchemeFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result$echoName_resultTupleScheme.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result$echoName_resultTupleSchemeFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService$echoName_result.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/NameServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thriftDemo/target/classes/thrift/Server.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/thriftDemo/thriftDemo.iml" afterPath="$PROJECT_DIR$/thriftDemo/thriftDemo.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -160,11 +34,33 @@
       <file leaf-file-name="DOM4JTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/heapStark/blogCode/xml/DOM4JTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="342">
               <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Document.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6/dom4j-1.6.jar!/org/dom4j/Document.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <marker date="1524288081184" expanded="false" signature="3:117" ph="/.../" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2574">
+              <caret line="143" column="21" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,61 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NameService.thrift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/thrift/NameService.thrift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2808">
-              <caret line="156" column="26" lean-forward="false" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thriftDemo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/leetcode/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/heapStark/blogCode/netty/timeServer/TimeClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="168">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -289,11 +135,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/heapStark/blogCode/JSQLParser/CCJSqlParserManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/heapStark/blogCode/xml/DOM4JTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/books.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/thriftDemo/src/main/NameService.thrift" />
         <option value="$PROJECT_DIR$/thriftDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -304,6 +150,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="/usr/share/maven" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -313,6 +165,10 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="blog-code" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="thriftDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -336,10 +192,10 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
+    <option name="x" value="1345" />
     <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -356,9 +212,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,93 +221,22 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blogCode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="thriftDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="thriftDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="thriftDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="thriftDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="thrift" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -697,6 +481,11 @@
       <workItem from="1524798110624" duration="6753000" />
       <workItem from="1524898024060" duration="28000" />
       <workItem from="1524898074340" duration="99000" />
+      <workItem from="1526214194866" duration="655000" />
+      <workItem from="1526472516861" duration="7000" />
+      <workItem from="1526906607715" duration="409000" />
+      <workItem from="1527076166689" duration="666000" />
+      <workItem from="1527333006533" duration="424000" />
     </task>
     <servers />
   </component>
@@ -733,28 +522,34 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35500000" />
+    <option name="totallyTimeSpent" value="41273000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="1345" y="-4" width="1857" height="1092" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22890237" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22885571" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30793318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26475456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28137094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12079427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -762,16 +557,44 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -791,32 +614,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thrift/src/NameService.thrift" />
-    <entry file="file://$PROJECT_DIR$/thrift/pom.xml" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/java/NameService.java" />
-    <entry file="file://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0-sources.jar!/org/apache/thrift/transport/TServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="76" column="3" lean-forward="false" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.pom" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0-sources.jar!/org/apache/thrift/transport/TServerSocket.java" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/java/NameService.java" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/java/thrift/Client.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0-sources.jar!/org/apache/thrift/TServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0-sources.jar!/org/apache/thrift/TServiceClient.java" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/gen-java/heapStark/blogCode/thrift/service/NameService.java" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/java/thrift/Server.java" />
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/java/thrift/NameServiceImpl.java" />
@@ -835,83 +638,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/Select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectExpressionItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/AllColumns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/SetStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/Statement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/PlainSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="36" column="41" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/CCJSqlParserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/SimpleCharStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4734">
-          <caret line="303" column="11" lean-forward="false" selection-start-line="303" selection-start-column="11" selection-end-line="303" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/CCJSqlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/Select.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectItem.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectExpressionItem.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/AllColumns.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/SetStatement.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/Statement.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/SelectBody.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/statement/select/PlainSelect.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/CCJSqlParserManager.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/SimpleCharStream.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/jsqlparser/jsqlparser/1.1/jsqlparser-1.1-sources.jar!/net/sf/jsqlparser/parser/CCJSqlParser.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/heapStark/blogCode/jdbc/JDBCTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -955,18 +692,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/org/dom4j/Element.java" />
     <entry file="file://$PROJECT_DIR$/target/classes/log4j.xml" />
     <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6/dom4j-1.6.jar!/org/dom4j/Document.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="180">
           <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <marker date="1524288081184" expanded="false" signature="3:117" ph="/.../" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -981,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/heapStark/blogCode/xml/DOM4JTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
+        <state relative-caret-position="342">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1001,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,40 +747,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thriftDemo/target/classes/NameService.thrift" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2808">
-          <caret line="156" column="26" lean-forward="false" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thriftDemo/src/main/thrift/NameService.thrift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thriftDemo/target/generated-sources/thrift/heapStark/blogCode/thrift/service/NameService.java" />
-    <entry file="file://$PROJECT_DIR$/thriftDemo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leetcode/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/apache/thrift/tools/maven-thrift-plugin/0.1.11/maven-thrift-plugin-0.1.11.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2486">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="143" column="21" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thriftDemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1093,7 +837,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1105,11 +849,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|blogcode</last-edited>
+          <last-edited>thriftDemo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
